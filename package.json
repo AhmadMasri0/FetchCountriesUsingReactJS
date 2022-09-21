@@ -2,7 +2,7 @@
   "name": "countriesusingreact",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ahmadmasri0.github.io/",
+  "homepage": "https://ahmadmasri0.github.io/reactTraining/",
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
