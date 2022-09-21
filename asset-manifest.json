@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.aaa28b0a.css",
-    "main.js": "/static/js/main.f49fdded.js",
-    "static/js/787.b8b4bd2d.chunk.js": "/static/js/787.b8b4bd2d.chunk.js",
-    "static/media/af.svg": "/static/media/af.330b375049537e2f735da408eee48db1.svg",
-    "static/media/al.svg": "/static/media/al.2bd38fb48cfa7899229ca9b3aafed8ef.svg",
-    "static/media/br.svg": "/static/media/br.08ba928808ad534f7897f09421053a5a.svg",
-    "static/media/us.svg": "/static/media/us.f8643f8db0bd21f9ae3a775a92693610.svg",
-    "index.html": "/index.html",
-    "static/media/ax.svg": "/static/media/ax.1a7acd14b1035a35100e4ff7ec507d2b.svg",
-    "static/media/dz.svg": "/static/media/dz.3ca765546949695ba939d0430406a6d8.svg",
-    "static/media/is.svg": "/static/media/is.54048ca7f6c42b18e85f8a26781051f1.svg",
-    "static/media/de.svg": "/static/media/de.d1231a184be1b26c0e0eae4632560667.svg",
-    "static/media/bel.svg": "/static/media/bel.bd884fd68fd30c1cb1c6550032d37700.svg",
-    "main.aaa28b0a.css.map": "/static/css/main.aaa28b0a.css.map",
-    "main.f49fdded.js.map": "/static/js/main.f49fdded.js.map",
-    "787.b8b4bd2d.chunk.js.map": "/static/js/787.b8b4bd2d.chunk.js.map"
+    "main.css": "/reactTraining/static/css/main.aaa28b0a.css",
+    "main.js": "/reactTraining/static/js/main.9a82dc68.js",
+    "static/js/787.b8b4bd2d.chunk.js": "/reactTraining/static/js/787.b8b4bd2d.chunk.js",
+    "static/media/af.svg": "/reactTraining/static/media/af.330b375049537e2f735da408eee48db1.svg",
+    "static/media/al.svg": "/reactTraining/static/media/al.2bd38fb48cfa7899229ca9b3aafed8ef.svg",
+    "static/media/br.svg": "/reactTraining/static/media/br.08ba928808ad534f7897f09421053a5a.svg",
+    "static/media/us.svg": "/reactTraining/static/media/us.f8643f8db0bd21f9ae3a775a92693610.svg",
+    "index.html": "/reactTraining/index.html",
+    "static/media/ax.svg": "/reactTraining/static/media/ax.1a7acd14b1035a35100e4ff7ec507d2b.svg",
+    "static/media/dz.svg": "/reactTraining/static/media/dz.3ca765546949695ba939d0430406a6d8.svg",
+    "static/media/is.svg": "/reactTraining/static/media/is.54048ca7f6c42b18e85f8a26781051f1.svg",
+    "static/media/de.svg": "/reactTraining/static/media/de.d1231a184be1b26c0e0eae4632560667.svg",
+    "static/media/bel.svg": "/reactTraining/static/media/bel.bd884fd68fd30c1cb1c6550032d37700.svg",
+    "main.aaa28b0a.css.map": "/reactTraining/static/css/main.aaa28b0a.css.map",
+    "main.9a82dc68.js.map": "/reactTraining/static/js/main.9a82dc68.js.map",
+    "787.b8b4bd2d.chunk.js.map": "/reactTraining/static/js/787.b8b4bd2d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aaa28b0a.css",
-    "static/js/main.f49fdded.js"
+    "static/js/main.9a82dc68.js"
   ]
 }
