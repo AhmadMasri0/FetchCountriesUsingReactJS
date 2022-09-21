@@ -13,7 +13,7 @@ function App() {
             <Header/>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={
+                    <Route path="/" exact element={
                         <>
                             <Control/>
                             <Countries/>
