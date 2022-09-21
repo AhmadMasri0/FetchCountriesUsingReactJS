@@ -1,0 +1,53 @@
+
+.header {
+    background-color: white !important;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+    height: 65px !important;
+    color: black !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap;
+    flex-direction: row !important;
+    padding-top: 8px;
+    padding-bottom: 8px !important;
+
+}
+
+div.MuiPaper-root {
+
+    margin-bottom: 15px;
+}
+
+.header h1 {
+    margin: 0.2rem 0 0 72px;
+    align-self: center;
+
+}
+
+.header p {
+    margin: 0 72px 0 0;
+    font-weight: bold;
+    align-self: center;
+    align-content: center;
+}
+
+.header p span, .header p svg {
+    margin-bottom: -5px !important;
+}
+
+.title {
+    font-size: 26px;
+
+}
+
+
+@media only screen and (max-width: 599px) {
+    .title {
+        font-size: 16px;
+        margin-left: 40px!important;
+    }
+    .mode{
+        margin-right: 40px!important;
+
+    }
+}
