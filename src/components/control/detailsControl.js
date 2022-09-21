@@ -12,7 +12,7 @@ export default function DetailsControl() {
         display: 'flex',
         justifyContent: 'space-between',
     }} className={classes.back}>
-        <Link to={'/'} style={{textDecoration: 'none'}}>
+        <Link to={'/reactTraining/'} style={{textDecoration: 'none'}}>
             <Back/>
         </Link>
     </Box>

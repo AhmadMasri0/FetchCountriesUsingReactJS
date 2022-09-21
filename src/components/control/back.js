@@ -1,6 +1,5 @@
 import {Button} from "@mui/material";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import classes from "./control.module.css";
 
 export default function Back() {
 
