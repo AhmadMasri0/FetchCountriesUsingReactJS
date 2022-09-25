@@ -13,13 +13,13 @@ function App() {
             <Header/>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" exact element={
+                    <Route path="/reactTraining/" exact element={
                         <>
                             <Container/>
                             <Countries/>
                         </>
                     }/>
-                    <Route path="/details" element={
+                    <Route path="/reactTraining/details" element={
                         <>
                             <ButtonContainer/>
                             <Details/>
