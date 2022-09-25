@@ -1,5 +1,4 @@
-import bel from '../../flags/bel.svg';
-import classes from './details.module.css';
+import bel from '../../assets/bel.svg';
 
 export default function Image(props) {
 

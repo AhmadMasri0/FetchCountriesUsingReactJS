@@ -1,70 +1,55 @@
-import classes from './details.module.css';
+import {Box, InputLabel, Typography} from "@mui/material";
+import BorderCountries from "./borderCountries";
 
-export default function Info(props) {
+export default function Info() {
 
-    return <div className={classes.info}>
-        <h2>Belgium</h2>
-        <div className={classes['more-details']}>
-            <div className={classes.col1}>
-                <label>
+
+    const labelStyle = {marginBottom: '12px', fontWeight: '600', color: 'black'};
+
+    return <Box mt={'40px'} width={'45%'} className={'info'}>
+        <Typography fontWeight={600} mb={'25px'} variant={"h5"}>
+            Belgium
+        </Typography>
+        <Box display={"flex"} justifyContent={"space-between"} flexWrap={"wrap"}>
+            <Box display={"flex"} flexDirection={"column"}>
+                <InputLabel sx={labelStyle}>
                     Native Name:
                     <span> Belgie</span>
-                </label>
-                <label>
+                </InputLabel>
+                <InputLabel sx={labelStyle}>
                     Population:
                     <span> 33,319,511</span>
-                </label>
-                <label>
+                </InputLabel>
+                <InputLabel sx={labelStyle}>
                     Region:
                     <span> Europe</span>
-                </label>
-                <label>
+                </InputLabel>
+                <InputLabel sx={labelStyle}>
                     Sub Region:
                     <span> Western Europe</span>
-                </label>
+                </InputLabel>
 
-                <label>
+                <InputLabel sx={{...labelStyle, marginBottom: '55px'}}>
                     Capital:
                     <span> Brussels</span>
-                </label>
-            </div>
-            <div className={classes.col2}>
-                <label>
+                </InputLabel>
+            </Box>
+            <Box display={"flex"} flexDirection={"column"}>
+                <InputLabel sx={labelStyle}>
                     Top Level Domain:
                     <span> .be</span>
-                </label>
-                <label>
+                </InputLabel>
+                <InputLabel sx={labelStyle}>
                     Currencies:
                     <span> Euro</span>
-                </label>
+                </InputLabel>
 
-                <label>
+                <InputLabel sx={labelStyle}>
                     Languages:
                     <span> Dutch, French, German</span>
-                </label>
-            </div>
-            <div className={classes['countries-container']}>
-                <label>
-                    Border countries:
-                </label>
-                <div className={classes.countries}>
-                    <div className={classes.btn}>
-                        <a href="./">
-                            France
-                        </a>
-                    </div>
-                    <div className={classes.btn}>
-                        <a href="./">
-                            Germany
-                        </a>
-                    </div>
-                    <div className={classes.btn}>
-                        <a href="./">
-                            Netherlands
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>;
+                </InputLabel>
+            </Box>
+            <BorderCountries labelStyle={labelStyle}/>
+        </Box>
+    </Box>;
 }

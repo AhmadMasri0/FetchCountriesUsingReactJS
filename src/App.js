@@ -1,9 +1,9 @@
 import Header from "./components/header/header";
 import './components/header/header.module.css';
-import Control from "./components/control/control";
+import Container from "./components/inputs/container";
 import Countries from "./components/countries/countries";
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import DetailsControl from "./components/control/detailsControl";
+import ButtonContainer from "./components/inputs/buttonContainer";
 import Details from "./components/details/details";
 
 function App() {
@@ -15,13 +15,13 @@ function App() {
                 <Routes>
                     <Route path="/reactTraining/" exact element={
                         <>
-                            <Control/>
+                            <Container/>
                             <Countries/>
                         </>
                     }/>
                     <Route path="/reactTraining/details" element={
                         <>
-                            <DetailsControl/>
+                            <ButtonContainer/>
                             <Details/>
                         </>
                     }/>

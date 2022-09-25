@@ -1,17 +1,14 @@
 
 .select {
-    outline: none;
     width: 210px;
-    height: 100% !important;
-    border: 0;
+    height: 100%;
     background-color: white;
-    color: black;
-    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
 }
 
 .search {
     background-color: white;
-    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+    box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075);
     border-radius: 5px;
     width: 37%
 }
@@ -42,15 +39,17 @@
     .box {
         flex-wrap: wrap;
         flex-direction: column;
-        margin-right: 40px;
-        margin-left: 40px;
+        margin-right: 40px !important;
+        margin-left: 40px !important;
     }
-    .back {
-        margin-left: 40px!important;
-        margin-top: 40px!important;
+
+    .btn {
+        margin-left: 40px !important;
+        margin-top: 40px !important;
     }
-    img{
-        height: 300px!important;
+
+    img {
+        height: 50%
     }
 }
 
