@@ -13,7 +13,7 @@ export default function BorderCountries({labelStyle}) {
             <Box ml={'10px'} width={'110px'} textAlign={"center"} borderRadius={'5px'} alignSelf={"center"}
                  pt={'2px'} pb={'2px'} className={classes.btn}
                  boxShadow={'0 0 0.175rem 0.09rem rgba(0, 0, 0, .1)'} sx={{'&:hover': {cursor: 'pointer'}}}>
-                <Link to={'/reactTraining/'}>
+                <Link to={'/'}>
                     France
                 </Link>
             </Box>
@@ -21,14 +21,14 @@ export default function BorderCountries({labelStyle}) {
                  pt={'2px'} pb={'2px'} className={classes.btn}
 
                  boxShadow={'0 0 0.175rem 0.09rem rgba(0, 0, 0, .1)'} sx={{'&:hover': {cursor: 'pointer'}}}>
-                <Link to={'/reactTraining/'}>
+                <Link to={'/'}>
                     Germany
                 </Link>
             </Box>
             <Box ml={'10px'} width={'110px'} textAlign={"center"} borderRadius={'5px'} alignSelf={"center"}
                  pt={'2px'} pb={'2px'} className={classes.btn}
                  boxShadow={'0 0 0.175rem 0.09rem rgba(0, 0, 0, .1)'} sx={{'&:hover': {cursor: 'pointer'}}}>
-                <Link to={'/reactTraining/'}>
+                <Link to={'/'}>
                     Netherlands
                 </Link>
             </Box>
