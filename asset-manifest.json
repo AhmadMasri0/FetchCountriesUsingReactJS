@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/reactTraining/static/css/main.ff994f1e.css",
-    "main.js": "/reactTraining/static/js/main.76d32343.js",
+    "main.css": "/reactTraining/static/css/main.c554d0ab.css",
+    "main.js": "/reactTraining/static/js/main.1b4180fe.js",
     "static/js/787.b8b4bd2d.chunk.js": "/reactTraining/static/js/787.b8b4bd2d.chunk.js",
     "static/media/af.svg": "/reactTraining/static/media/af.330b375049537e2f735da408eee48db1.svg",
     "static/media/al.svg": "/reactTraining/static/media/al.2bd38fb48cfa7899229ca9b3aafed8ef.svg",
@@ -13,12 +13,12 @@
     "static/media/is.svg": "/reactTraining/static/media/is.54048ca7f6c42b18e85f8a26781051f1.svg",
     "static/media/de.svg": "/reactTraining/static/media/de.d1231a184be1b26c0e0eae4632560667.svg",
     "static/media/bel.svg": "/reactTraining/static/media/bel.bd884fd68fd30c1cb1c6550032d37700.svg",
-    "main.ff994f1e.css.map": "/reactTraining/static/css/main.ff994f1e.css.map",
-    "main.76d32343.js.map": "/reactTraining/static/js/main.76d32343.js.map",
+    "main.c554d0ab.css.map": "/reactTraining/static/css/main.c554d0ab.css.map",
+    "main.1b4180fe.js.map": "/reactTraining/static/js/main.1b4180fe.js.map",
     "787.b8b4bd2d.chunk.js.map": "/reactTraining/static/js/787.b8b4bd2d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ff994f1e.css",
-    "static/js/main.76d32343.js"
+    "static/css/main.c554d0ab.css",
+    "static/js/main.1b4180fe.js"
   ]
 }
