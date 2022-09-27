@@ -1,6 +1,5 @@
 import {Box, InputLabel} from "@mui/material";
-import classes from "./details.module.css";
-import {Link} from "react-router-dom";
+import BorderCountry from "./borderCountry";
 
 
 export default function BorderCountries({labelStyle}) {
@@ -10,28 +9,9 @@ export default function BorderCountries({labelStyle}) {
             Border countries:
         </InputLabel>
         <Box display={"flex"}>
-            <Box ml={'10px'} width={'110px'} textAlign={"center"} borderRadius={'5px'} alignSelf={"center"}
-                 pt={'2px'} pb={'2px'} className={classes.btn}
-                 boxShadow={'0 0 0.175rem 0.09rem rgba(0, 0, 0, .1)'} sx={{'&:hover': {cursor: 'pointer'}}}>
-                <Link to={'/reactTraining/'}>
-                    France
-                </Link>
-            </Box>
-            <Box ml={'10px'} width={'110px'} textAlign={"center"} borderRadius={'5px'} alignSelf={"center"}
-                 pt={'2px'} pb={'2px'} className={classes.btn}
-
-                 boxShadow={'0 0 0.175rem 0.09rem rgba(0, 0, 0, .1)'} sx={{'&:hover': {cursor: 'pointer'}}}>
-                <Link to={'/reactTraining/'}>
-                    Germany
-                </Link>
-            </Box>
-            <Box ml={'10px'} width={'110px'} textAlign={"center"} borderRadius={'5px'} alignSelf={"center"}
-                 pt={'2px'} pb={'2px'} className={classes.btn}
-                 boxShadow={'0 0 0.175rem 0.09rem rgba(0, 0, 0, .1)'} sx={{'&:hover': {cursor: 'pointer'}}}>
-                <Link to={'/reactTraining/'}>
-                    Netherlands
-                </Link>
-            </Box>
+            <BorderCountry name={'France'}/>
+            <BorderCountry name={'Germany'}/>
+            <BorderCountry name={'Netherlands'}/>
         </Box>
     </Box>
 }

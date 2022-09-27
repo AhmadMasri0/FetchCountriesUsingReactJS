@@ -6,10 +6,6 @@ a {
     text-decoration: none;
 }
 
-.details{
-    max-width: 1296px;
-}
-
 @media only screen and (max-width: 768px) {
     .details {
         flex-direction: column;
@@ -25,10 +21,4 @@ a {
         font-size: 12px;
     }
 
-}
-
-@media only screen and (min-width: 1440px){
-    .details{
-        /*margin-right: 10% !important;*/
-    }
 }
