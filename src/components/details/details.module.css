@@ -10,14 +10,15 @@ a {
     .details {
         flex-direction: column;
         flex-wrap: wrap;
+        margin-top: 30px;
+        margin-left: 40px;
     }
 
     img{
-
         width: 100%!important;
+        height: 50% !important;
     }
     .btn {
-        width: 50% !important;
         font-size: 12px;
     }
 

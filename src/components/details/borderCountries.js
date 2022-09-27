@@ -8,7 +8,7 @@ export default function BorderCountries({labelStyle}) {
         <InputLabel sx={labelStyle}>
             Border countries:
         </InputLabel>
-        <Box display={"flex"}>
+        <Box display={"flex"} mb={'35px'}>
             <BorderCountry name={'France'}/>
             <BorderCountry name={'Germany'}/>
             <BorderCountry name={'Netherlands'}/>
