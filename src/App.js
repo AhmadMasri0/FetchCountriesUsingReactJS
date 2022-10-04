@@ -1,33 +1,30 @@
 import Header from "./components/header/header";
 import './components/header/header.module.css';
-import Container from "./components/inputs/container";
-import Countries from "./components/countries/countries";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import ButtonContainer from "./components/inputs/buttonContainer";
-import Details from "./components/details/details";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import Home from "./pages/home";
+import Details from "./pages/details";
+import {useEffect, useState} from "react";
 
 function App() {
 
+    const [isDarkMode, setIsDarkMode] = useState(JSON.parse(localStorage.getItem('darkMode')));
+
+    useEffect(()=>{
+        document.body.style.backgroundColor = isDarkMode ? '#202c37' : '#F8F9FAFF';
+    }, [isDarkMode])
     return (
-        <div>
-            <Header/>
-            <BrowserRouter>
+            <Router basename={'/reactTraining'}>
+                <Header darkMode={isDarkMode} darkModeHandler={setIsDarkMode}/>
                 <Routes>
-                    <Route path="/reactTraining/" exact element={
-                        <>
-                            <Container/>
-                            <Countries/>
-                        </>
+                    <Route path="/" exact element={
+                        <Home darkMode={isDarkMode}/>
                     }/>
-                    <Route path="/reactTraining/details" element={
-                        <>
-                            <ButtonContainer/>
-                            <Details/>
-                        </>
+                    <Route path="/details/:id" element={
+                        <Details darkMode={isDarkMode}/>
                     }/>
                 </Routes>
-            </BrowserRouter>
-        </div>
+            </Router>
+
     );
 }
 

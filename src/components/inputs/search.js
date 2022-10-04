@@ -1,12 +1,20 @@
 import {Input, InputAdornment} from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
+import classes from '../inputs/inputs.module.css';
+import {useRef} from "react";
 
 
-export default function Search({search, icon}) {
+export default function Search({placeholder, searchHandler, darkMode}) {
 
-    return <Input className={search} placeholder='Search for a country...'
+    const searchRef = useRef();
+    const style = darkMode ? {backgroundColor: '#2b3945', color:'white'} : {};
+
+    const search = () => {
+        searchHandler(searchRef.current.children[1].value);
+    }
+    return <Input style={style} ref={searchRef} onKeyUp={search} className={classes.search} placeholder={placeholder}
                   startAdornment={
-                      <InputAdornment className={icon} position="start">
+                      <InputAdornment style={style} className={classes.icon} position="start">
                           <SearchIcon/>
                       </InputAdornment>
                   }/>;
