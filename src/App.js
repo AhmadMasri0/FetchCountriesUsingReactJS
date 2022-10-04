@@ -11,7 +11,8 @@ function App() {
 
     useEffect(()=>{
         document.body.style.backgroundColor = isDarkMode ? '#202c37' : '#F8F9FAFF';
-    }, [isDarkMode])
+    }, [isDarkMode]);
+
     return (
             <Router basename={'/reactTraining'}>
                 <Header darkMode={isDarkMode} darkModeHandler={setIsDarkMode}/>

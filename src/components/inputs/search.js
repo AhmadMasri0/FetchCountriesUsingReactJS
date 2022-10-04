@@ -12,6 +12,7 @@ export default function Search({placeholder, searchHandler, darkMode}) {
     const search = () => {
         searchHandler(searchRef.current.children[1].value);
     }
+
     return <Input style={style} ref={searchRef} onKeyUp={search} className={classes.search} placeholder={placeholder}
                   startAdornment={
                       <InputAdornment style={style} className={classes.icon} position="start">

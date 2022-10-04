@@ -1,7 +1,7 @@
 import {Box, Typography} from "@mui/material";
 import BorderCountries from "./borderCountries";
 import {useEffect, useState} from "react";
-
+import classes from './details.module.css';
 
 function InfoItem({label, value}) {
 
@@ -23,12 +23,12 @@ export default function Info({country, darkMode}) {
         setBorders(country.borders);
     }, [country]);
 
-    return <Box mt={'40px'} width={'45%'} className={'info'} style={style}>
+    return <Box mt={'40px'} width={'45%'} className={classes.info} style={style}>
         <Typography fontWeight={600} mb={'25px'} variant={"h5"}>
             {country.name.common}
         </Typography>
         <Box display={"flex"} justifyContent={"space-between"} flexWrap={"wrap"}>
-            <Box display={"flex"} flexDirection={"column"} marginBottom={'15px'}>
+            <Box display={"flex"} flexDirection={"column"} marginBottom={'65px'}>
                 <InfoItem label={'Native Name:'} value={Object.values(country.name.nativeName)[0].common}/>
                 <InfoItem label={'Population:'} value={country.population.toLocaleString('en-US')}/>
                 <InfoItem label={'Region:'} value={country.region}/>

@@ -41,14 +41,14 @@ export default function Home({darkMode}) {
 
     }, [URL]);
 
-    const filterCountries = (countries, value) => {
-
-        return countries.filter((c) => c.name.official.toLowerCase().includes(value.toLowerCase()));
+    const filterCountries = (countries, searchV, filterV) => {
+        let res =  countries.filter((c) => c.name.official.toLowerCase().includes(searchV.toLowerCase()));
+        res = (filterV && (filterV !== 'Favourites')) ? res.filter(c => c.region.includes(filterV)) : res;
+        return res;
     }
 
     const filteringSearchingHandler = (filterV, searchV) => {
-        let countries = filterCountries(filterV === 'Favourites' ? favourites : allCountries, searchV);
-        filterV && (filterV !== 'Favourites') && (countries = countries.filter(c => c.region.includes(filterV)));
+        let countries = filterCountries(filterV === 'Favourites' ? favourites : allCountries, searchV, filterV);
         setCurrentCountries(countries);
     }
 
@@ -71,8 +71,8 @@ export default function Home({darkMode}) {
     }
 
     return <>
-        <SearchFilterContainer darkMode={darkMode} search={searchHandler} filter={filterHandler}
-                               searchPlaceholder={'Search for a country...'}/>
+        <SearchFilterContainer darkMode={darkMode} searchHandler={searchHandler} filterHandler={filterHandler}
+                               searchPlaceholder={'Search for a country...'} filterLabel={'Filter by'}/>
         <HomeContentContainer darkMode={darkMode} favourites={favourites} FavouritesListHandler={setFavourites}
                               countries={currentCountries}/>
     </>
