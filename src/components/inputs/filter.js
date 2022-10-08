@@ -10,28 +10,30 @@ export default function Filter({filterLabel}) {
     const filterOptions = ['Asia', 'Africa', 'America', 'Europe', 'Oceania', 'Favourites'];
     const countriesContext = useContext(CountriesContext);
     const themeContext = useContext(ThemeContext);
-
     const [region, setRegion] = useState('');
-    const [isShown, setIsShown] = useState('none');
 
-    const sx = themeContext.isDarkMode ? {margin: '0', marginTop: '-8px', marginBottom: '-8px', paddingTop: '15px'} : {};
+    const sx = themeContext.isDarkMode ? {
+        margin: '0',
+        marginTop: '-8px',
+        marginBottom: '-8px',
+        paddingTop: '15px'
+    } : {};
 
     const clearStyle = {
         fontSize: '12px', marginTop: '-8px',
-        marginBottom: '-8px', display: isShown,
+        marginBottom: '-8px', display: region ? '' : 'none',
         flexDirection: 'row-reverse', backgroundColor: themeContext.isDarkMode ? '#2b3945' : "transparent",
         color: themeContext.textColor
     };
 
     const filter = (e) => {
-        setIsShown(e.target.value ? '' : 'none');
         setRegion(e.target.value ? e.target.value : '');
         countriesContext.filterHandler(e.target.value);
     }
 
     return <FormControl style={themeContext.componentStyle}>
 
-        <InputLabel style={{color: themeContext.textColor}}id="filter-label">{filterLabel}</InputLabel>
+        <InputLabel style={{color: themeContext.textColor}} id="filter-label">{filterLabel}</InputLabel>
         <Select value={region} onChange={(e) => filter(e)} labelId="filter-label" label={filterLabel}
                 className={classes.select} style={themeContext.componentStyle}>
             {filterOptions.map((region) => (
@@ -40,9 +42,9 @@ export default function Filter({filterLabel}) {
                     {region}
                 </MenuItem>
             ))}
-            {<MenuItem onClick={filter} style={clearStyle}>
+            <MenuItem onClick={filter} style={clearStyle}>
                 clear filter
-            </MenuItem>}
+            </MenuItem>
         </Select>
     </FormControl>
 
