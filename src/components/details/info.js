@@ -1,7 +1,8 @@
 import {Box, Typography} from "@mui/material";
 import BorderCountries from "./borderCountries";
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import classes from './details.module.css';
+import ThemeContext from "../../store/theme-context";
 
 function InfoItem({label, value}) {
 
@@ -13,11 +14,12 @@ function InfoItem({label, value}) {
     </label>
 }
 
-export default function Info({country, darkMode}) {
+export default function Info({country}) {
 
     const [borders, setBorders] = useState();
+    const themeContext = useContext(ThemeContext);
 
-    const style = darkMode ? {color:'white'} : {};
+    const style = themeContext.isDarkMode ? {color:'white'} : {};
 
     useEffect(() => {
         setBorders(country.borders);
@@ -40,7 +42,7 @@ export default function Info({country, darkMode}) {
                 <InfoItem label={'Currencies:'} value={Object.values(country.currencies)[0].name}/>
                 <InfoItem label={'Languages:'} value={Object.values(country.languages)[0]}/>
             </Box>
-            {borders && <BorderCountries darkMode={darkMode} borders={borders}/>}
+            {borders && <BorderCountries borders={borders}/>}
         </Box>
     </Box>;
 }

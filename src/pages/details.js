@@ -3,7 +3,7 @@ import CountryDetails from '../components/details/details';
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 
-export default function Details({darkMode}) {
+export default function Details() {
 
 
     const {id} = useParams();
@@ -21,7 +21,7 @@ export default function Details({darkMode}) {
     }, [URL]);
 
     return <>
-        <ButtonContainer darkMode={darkMode} name={'Back'}/>
-        <CountryDetails darkMode={darkMode} isLoaded={isLoaded} country={country}/>
+        <ButtonContainer name={'Back'}/>
+        <CountryDetails isLoaded={isLoaded} country={country}/>
     </>
 }

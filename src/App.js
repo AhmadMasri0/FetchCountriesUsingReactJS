@@ -3,30 +3,26 @@ import './components/header/header.module.css';
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import Home from "./pages/home";
 import Details from "./pages/details";
-import {useEffect, useState} from "react";
+import {CountriesContextProvider} from "./store/countries-context";
 
 function App() {
 
-    const [isDarkMode, setIsDarkMode] = useState(JSON.parse(localStorage.getItem('darkMode')));
-
-    useEffect(()=>{
-        document.body.style.backgroundColor = isDarkMode ? '#202c37' : '#F8F9FAFF';
-    }, [isDarkMode]);
-
     return (
-            <Router basename={'/reactTraining'}>
-                <Header darkMode={isDarkMode} darkModeHandler={setIsDarkMode}/>
-                <Routes>
-                    <Route path="/" exact element={
-                        <Home darkMode={isDarkMode}/>
-                    }/>
-                    <Route path="/details/:id" element={
-                        <Details darkMode={isDarkMode}/>
-                    }/>
-                </Routes>
-            </Router>
+        <Router basename={'/reactTraining'}>
+            <Header/>
+            <Routes>
+                <Route path="/" exact element={
+                    <CountriesContextProvider>
+                        <Home/>
+                    </CountriesContextProvider>
+                }/>
+                <Route path="/details/:id" element={
+                    <Details/>
+                }/>
+            </Routes>
 
+        </Router>
     );
-}
+};
 
 export default App;

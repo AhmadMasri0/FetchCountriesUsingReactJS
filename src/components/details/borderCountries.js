@@ -3,7 +3,7 @@ import BorderCountry from "./borderCountry";
 import {useEffect, useState} from "react";
 
 
-export default function BorderCountries({borders, darkMode}) {
+export default function BorderCountries({borders}) {
 
     const labelStyle = {marginBottom: '12px', fontWeight: '600'};
 
@@ -22,7 +22,7 @@ export default function BorderCountries({borders, darkMode}) {
         </label>
         <Box display={"flex"} flexWrap={"wrap"} mb={'35px'}>
             {
-                countries.map((country) => <BorderCountry darkMode={darkMode} name={country.name.common} cca2={country.cca2}/>)
+                countries.map((country) => <BorderCountry name={country.name.common} cca2={country.cca2}/>)
             }
         </Box>
     </Box>

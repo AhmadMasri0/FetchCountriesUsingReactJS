@@ -1,17 +1,19 @@
 import {Card, CardMedia} from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2";
 import {Link} from "react-router-dom";
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import StarIcon from '@mui/icons-material/Star';
 import classes from './country.module.css';
 import CardInfo from "./cardInfo";
+import CountriesContext from "../../store/countries-context";
 
 
-export default function Country({country, addCountry, favourites, darkMode}) {
+export default function Country({country}) {
 
     const [opacity, setOpacity] = useState('1');
     const [starBg, setStarBg] = useState('lightgray');
-
+    const countriesContext = useContext(CountriesContext);
+    const favourites = countriesContext.favourites;
 
     useEffect(() => {
         const c = favourites.find(c => c.cca2 === country.cca2);
@@ -33,8 +35,7 @@ export default function Country({country, addCountry, favourites, darkMode}) {
 
     const addToList = () => {
         setStarBg(starBg === 'orange' ? 'lightgray' : 'orange');
-        addCountry(country);
-
+        countriesContext.addToFavourites(country, true);
     }
 
 
@@ -46,7 +47,7 @@ export default function Country({country, addCountry, favourites, darkMode}) {
                 <Link to={`./details/${country.cca2}`} onDragStart={dragStart}
                       onDragEnd={dragEnd} style={{textDecoration: 'none', opacity}}>
                     <CardMedia height="160" component="img" alt={country.flag} image={country.flags.svg}/>
-                    <CardInfo darkMode={darkMode} country={country}/>
+                    <CardInfo country={country}/>
                 </Link>
                 <StarIcon className={classes.star} onClick={addToList} style={{
                     color: starBg, float: 'right', display: 'none', marginTop: '-30px', marginRight: '10px'

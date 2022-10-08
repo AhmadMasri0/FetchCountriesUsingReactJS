@@ -1,7 +1,12 @@
-export default function CountryItem({mt, title, value, darkMode}) {
+import ThemeContext from "../../store/theme-context";
+import {useContext} from "react";
 
-    return <p style={{fontWeight: '600', marginLeft: '5px', marginBottom: '-1px', color: darkMode ? 'white' : 'black', marginTop: mt}}>
+export default function CountryItem({mt, title, value}) {
+
+    const themeContext = useContext(ThemeContext);
+
+    return <p style={{fontWeight: '600', marginLeft: '5px', marginBottom: '-1px', color: themeContext.textColor, marginTop: mt}}>
         {title}:
-        <span style={{fontWeight: '400', color: darkMode ? 'white' : 'grey'}}> {value}</span>
+        <span style={{fontWeight: '400'}}> {value}</span>
     </p>;
 }
